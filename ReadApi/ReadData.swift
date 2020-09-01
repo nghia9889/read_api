@@ -6,12 +6,17 @@
 //  Copyright © 2020 Tao Trong Nghia. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Article: NSObject {
-    var user: String?
-    var age: String?
-    var gender: String?
-    var location: String?
-    var imageUrl: String?
+struct Data : Codable{
+    var data : [Location]
 }
+struct Location : Codable {
+    let userName : String
+    let age : Int
+    let gender : String
+    let location : String
+    let image : String
+    
+}
+
